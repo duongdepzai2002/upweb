@@ -1,6 +1,6 @@
 /* begin */
 .background-img {
-    background: url(/assets/img/background_app.jpg) top center no-repeat;
+    background: url(../assets/img/background_app.jpg) top center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     width: 100vw;
