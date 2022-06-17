@@ -1,0 +1,27 @@
+:root {
+    --primary-color: #3caf4b;
+    --white-color: #fff;
+    --secondary-color: #212529;
+    --navbar-bot-height: 50px;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 2.4rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.btn {
+    text-decoration: none;
+    outline: none;
+    padding: 10px 26px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: inline-block;
+    list-style: none;
+}

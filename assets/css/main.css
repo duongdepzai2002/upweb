@@ -1,0 +1,1165 @@
+/* begin */
+.background-img {
+    background: url(/assets/img/background_app.jpg) top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+/* html */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Directional */
+.app.hide {
+    display: none;
+}
+
+.overlay.hide {
+    display: none;
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    transition: all 0.8s ease;
+    box-shadow: 0px 16px 15px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-top {
+    height: 92px;
+    background-color: #171717;
+}
+
+.navbar.hide {
+    transform: translateY(calc(-100% + var(--navbar-bot-height)));
+}
+
+.navbar-top__list {
+    display: none;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 -36px;
+}
+
+.navbar-top-open-pc {
+    display: flex;
+}
+
+.navbar-top__item {
+    margin-top: 4px;
+    padding: 4px 0;
+}
+
+.navbar-top__item:hover .navbar-top__link {
+    color: var(--white-color)
+}
+
+.navbar-top__link {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0 20px;
+    transition: color .25s linear;
+}
+
+.navbar-top__link--with-border {
+    border-left: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+}
+
+.navbar-top__img {
+    width: 76px;
+}
+
+.navbar-top__icon {
+    margin: 0 -14px;
+    color: var(--white-color);
+}
+
+.navbar-menu {
+    position: absolute;
+    top: 30px;
+    right: 16px;
+    font-size: 3rem;
+    color: var(--white-color);
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-bottom {
+    height: var(--navbar-bot-height);
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: -1px;
+}
+
+.nav-bot__left {
+    display: flex;
+    align-items: center;
+    margin-left: 206px;
+}
+
+.navbar-scan {
+    padding: 10px;
+    position: relative;
+    line-height: 100%;
+    margin: 0px -10px;
+}
+
+.nav-bot__right {
+    display: flex;
+    margin-right: 196px;
+}
+
+.navbar-scan__img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.navbar-scan__wrap {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: var(--secondary-color);
+    width: 234px;
+    height: 74px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 5px #444;
+    z-index: 10;
+}
+
+.navbar-scan__wrap.active {
+    display: flex;
+}
+
+.nav-bot-scan__link {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    text-align: left;
+    margin: 4px 8px;
+    line-height: 2rem;
+}
+
+.nav-bot__language {
+    border: 1px solid var(--white-color);
+    width: 102px;
+    height: 27px;
+    color: var(--white-color);
+    position: relative;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-bot__language span {
+    margin-left: 6px;
+    font-size: 1.4rem;
+}
+
+.nav-bot__flag {
+    width: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+.language-swap {
+    padding: 0;
+    margin: 0;
+    width: 110px;
+    height: 74px;
+    border-radius: 10px;
+    border: 1px solid var(--white-color);
+    background-color: var(--secondary-color);   
+    position: absolute;
+    top: calc(100% + 10px);
+    display: none;
+    z-index: 10;
+}
+
+.language-swap.active {
+    display: block;
+}
+
+.language-swap::after {
+    content: "";
+    display: block;
+    top: 50%;
+    left: 10px;
+    position: absolute;
+    background-color: #4a4b53;
+    width: 90px;
+    height: 1px;    
+}
+
+.language-swap__item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 4px;
+}
+
+.language-swap__img {
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+
+.nav-bot__download {
+    border: 1px solid var(--white-color);
+    width: 102px;
+    height: 27px;
+    color: var(--white-color);
+    margin-left: 10px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-bot__download::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(100% - 6px);
+    left: 0;
+    width: 176px;
+    height: 16px;
+}
+
+.nav-bot__download:hover .nav-bot__qr {
+    display: block;
+}
+
+.nav-bot__download span {
+    margin-left: 6px;
+    font-size: 1.4rem;
+}
+
+.nav-bot__qr {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 176px;
+    height: 306px;
+    padding: 8px;
+    background-color: rgb(236, 235, 235);
+    border-radius: 2px;
+    display: none;
+    z-index: 2;
+}
+
+.nav-qr__img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.nav-qr__app-img {
+    width: 160px;
+    margin: -4px 0;
+}
+
+.login-wrapper {
+    margin-top: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-bot__register {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.nav-bot__login {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin: 6px 6px 0 6px;
+}
+
+.nav-bot__cart-icon {
+    width: 32px;
+    cursor: pointer;
+}
+
+/* Trần Đức ********************** */
+/* Trần Đức begin */
+
+/* Slider */
+.slider {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 140px;
+}
+
+.slider.hide {
+    display: none;
+}
+
+.slider__item {
+    width: 100%;
+    padding-top: 46%;
+    
+    flex: 1 0 100%;
+    transition: all 0.6s ease;
+}
+
+.slider__item:first-child {
+    background: url(/assets/img/slider_imgs/img_01) top center / contain no-repeat;
+}
+
+.slider__item:nth-child(2) {
+    background: url(/assets/img/slider_imgs/img_02) top center / contain no-repeat;
+}
+
+.slider__item:nth-child(3) {
+    background: url(/assets/img/slider_imgs/img_03) top center / contain no-repeat;
+}
+
+.slider__item:nth-child(4) {
+    background: url(/assets/img/slider_imgs/img_04) top center / contain no-repeat;
+}
+
+.slider__item:nth-child(5) {
+    background: url(/assets/img/slider_imgs/img_05) top center / contain no-repeat;
+}
+
+.slider__item:nth-child(6) {
+    background: url(/assets/img/slider_imgs/img_06) top center / contain no-repeat;
+}
+
+.slider__dot-list {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    list-style: none;
+}
+
+.slider__dot-item {
+    background-color: #fff;
+    height: 5px;
+    min-width: 28px;
+    margin: 0 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.slider__dot-item.active {
+    background-color: var(--primary-color);
+    padding: 0 20px;
+}
+
+/* Content */
+.content {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.content.hide {
+    display: none;
+}
+
+.food-offer {
+    overflow: hidden;
+}
+
+.food-offer__layer-01 {
+    height: 400px;
+    width: 108%;
+    background: url(/assets/img/food_slider/frames.png) center / contain no-repeat;
+    position: relative;
+    margin-left: 14px;
+}
+
+.food-offer__layer-02 {
+    width: 86%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.food-offer__layer-03 {
+    position: absolute;
+    top: -10%;
+    left: -8%;
+    height: 160px;
+}
+
+
+.food-offer__info {
+    width: 100%;
+    margin-left: 14%;
+
+}
+
+.food-offer__heading {
+    font-size: 3.6rem;
+    color: var(--white-color);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.food-offer__name {
+    font-size: 3rem;
+    color: var(--white-color);
+    line-height: 0;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    font-weight: 400;
+}
+
+.food-offer__stick {
+    display: block;
+}
+
+.food-food-offer__btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: all 0.2s linear;
+    border-radius: 16px;
+    margin-top: 70px;
+}
+
+.food-food-offer__btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* Trần Đức ********************** */
+/* Trần Đức end */
+
+
+/* Lan Anh ************************** */
+/* Lan Anh begin */
+
+/* Food-extra-top */
+
+.food-extra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food-extra__img {
+    width: 10%;
+}
+
+.food-extra__content {
+    text-align: center;
+    color: var(--white-color);
+}
+
+.food-extra__heading {
+    font-size: 3.6rem;
+    letter-spacing: 1px;
+    line-height: 0;
+    font-family: AlfaSlabOneRegular;
+    text-transform: uppercase;
+}
+
+.food-extra__sub-heading {
+    font-size: 2rem;
+    font-family: geoslam_light;
+    letter-spacing: 0.5px;
+    max-width: 540px;
+}
+
+/* commodity */
+.commodity {
+    overflow: hidden;   
+}
+
+.commodity__wrap {
+    text-align: center;
+}
+
+.commodity__img {
+    width: 320px;
+}
+
+.commodity__tag {
+    width: 42px;
+}
+
+.commodity__tag-wrap {
+    position: relative;
+}
+
+.commodity__tag-wrap::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 130px;
+    height: 2px;
+    background-color: #98999c;
+}
+
+.commodity__tag-wrap::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    width: 130px;
+    height: 2px;
+    background-color: #a5a5a7;
+}
+
+.commodity__heading {
+    font-size: 2.2rem;
+    color: var(--white-color);
+    font-weight: 700;
+}
+
+.commodity__detail {
+    color: var(--white-color);
+    font-size: 1.8rem;
+    max-width: 340px;
+    font-family: geoslam_light;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Food-extra-bottom */
+.food-extra--bottom {
+    margin-top: -80px;
+}
+
+.food-extra__description {
+    font-size: 1.6rem;
+    font-family: geoslam_light;
+    letter-spacing: 0.5px;
+    max-width: 540px;
+}
+
+.food-extra__img--down {
+    margin-top: 160px;
+}
+
+.food-extra__heading--with-sticker {
+    position: relative;
+}
+
+.food-extra__sticker {
+    position: absolute;
+    top: -84px;
+    right: 22px;
+    width: 100px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Food-board */
+.food-board {
+    background: url(/assets/img/board_imgs/board.webp) center / cover no-repeat;
+    margin-top: -10%;
+    margin-left: 10px;
+    width: 445px;
+    height: 505px;
+    position: relative;
+}
+
+.food-board__container {
+    top: 15px;
+    left: 15px;
+    position: absolute; 
+    width: 415px;
+    height: 475px;
+    border: 1px solid #444;
+}
+
+.food-board__element {
+    display: flex;
+    justify-content: space-around;
+    height: 156px;
+    width: 100%;
+}
+
+.food-board__element--with-border {
+    position: relative;
+}
+
+.food-board__element--with-border::before {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 1px;
+    background-color: #444;
+    position: absolute;
+    top: 1px;
+    left: 56px;
+}
+
+.food-board__element--with-border::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 1px;
+    background-color: #444;
+    position: absolute;
+    bottom: 1px;
+    right: 56px;
+}
+
+.food-board__img {
+    width: 121px;
+    height: 90px;
+    margin-left: 26px;
+    margin-top: 16px;
+}
+
+.food-board__title {
+    color: var(--white-color);  
+    text-align: justify;
+    max-width: 230px;
+}
+
+.food-board__heading {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-top: 8px;
+    margin-bottom: -4px;
+}
+
+.food-board__sub-heading {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Lan Anh ************************** */
+/* Lan Anh end */
+
+
+/* Cart-form */
+.cart-form {
+    height: 800px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-form__wrap {
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cart-form.active {
+    display: flex;
+}
+
+.cart-form__img {
+    width: 90%;
+}
+
+.cart-form__heading {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.cart-form__notify {
+    font-size: 1.6rem;
+    color: var(--white-color);
+    margin-top: 0;
+    text-align: center;
+}
+
+.cart-form__btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+}
+
+/* Đạt ********************** */
+/* Đạt begin */
+
+/* Form */
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.form-slider {
+    height: 800px;
+    background: url(/assets/img/form/form_background.jpg) top center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.form-slider__imgs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-slider__img {
+    height: 60%;
+}
+
+.form-slider__dots {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    bottom: 6%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-slider__dot:hover {
+    background-color: #ccc;
+}
+
+.form-slider__dot {
+    width: 16px;
+    height: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    margin-left: 16px;
+    margin-right: 8px;
+    box-shadow: 0 0 10px #666;
+    cursor: pointer;
+}
+
+.form-login {
+    padding-top: 16%;
+    padding-left: 90px;
+}
+
+.modal {
+    width: 370px;
+}
+
+.form-login__heading {
+    font-size: 3.2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+}
+
+.form-login__label {
+    color: var(--white-color);
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.code {
+    position: relative;
+    width: 100%;
+}
+
+.code-country {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -3px;
+}
+
+.code-nation {
+    height: 44px;
+    width: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--white-color);
+    border-radius: 4px;
+}
+
+.code-nation__img {
+    width: 20px;
+    border-radius: 50%;
+}
+
+.code-nation__icon {
+    font-size: 1.4rem;
+    color: rgb(153, 173, 188);
+}
+
+.code-country__number {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    margin-left: 6px;
+}
+
+.code-input__wrap {
+    border: 1px solid #55565f;
+    width: 100%;
+    padding: 2px 0;
+    border-radius: 4px;
+}
+
+.code-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 76%;
+    height: 39.5px;
+    margin-left: 88px;
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+.form-input {
+    margin-left: 12px;
+    width: 90%;
+}
+
+.icon-eye {
+    font-size: 1.6rem;
+    color: var(--white-color);
+    position: absolute;
+    right: 14px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.form-btn {
+    margin-top: 40px;
+    padding: 10px 0;
+    border-radius: 30px;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    background-color: var(--primary-color);
+    width: 100%;
+    font-weight: 600;
+    border: none;
+}
+
+.form-login span {
+    width: 100%;
+    text-transform: uppercase;
+    color: #55565f;
+    font-size: 1.6rem;
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.form-login span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 36%;
+    height: 2px;
+    background-color: #55565f;
+}
+
+.form-login span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 36%;
+    height: 2px;
+    background-color: #55565f;
+}
+
+.form-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-social__icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    margin: 0 8px;
+    font-size: 2.2rem;
+    border-radius: 50%;
+}
+
+.form-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.form-text:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    height: 320px;
+    background-color: #016b37;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.footer-brand {
+    width: 27%;
+}
+
+.footer-brand__img {
+    width: 192px;
+    height: 192px;
+    margin-left: 40%;
+}
+
+.footer-content {
+    width: 50%;
+}
+
+.footer-policy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36px;
+}
+
+.footer-policy-list__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.footer-policy__icon {
+    width: 20px;
+}
+
+.footer-policy__item {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--white-color);
+    text-decoration: none;
+    margin-left: 8px;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.footer-policy__item:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-info {
+    color: var(--white-color);
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info__adress {
+    margin-left: -6px;
+}
+
+.footer-info__item {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-left: 8px;
+}
+
+.footer-info__item--with-bold {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.footer-info-item__with-line-hight {
+    line-height: 0;
+}
+
+.footer-info__contact {
+    margin-right: 24px;
+}
+
+.footer-info-item__wrap {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.footer-info-item__img {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-logo {
+    width: 22%;
+    position: absolute;
+    top: 66%;
+    right: 0;
+}
+/* Đạt ************************** */
+/* Đạt end */
+
+
+/* Extra */
+.buy-tag {
+    position: fixed;
+    width: 168px;
+    height: 48px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    top: 50%;
+    right: -10px;
+    text-align: center;
+    border-radius: 4px;
+    z-index: 100;
+    box-shadow: 4px 2px 10px rgb(33, 32, 32);
+    cursor: pointer;
+}
+
+.buy-tag.hide {
+    display: none;
+}
+
+.buy-tag span {
+    line-height: 48px;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.btn-to-top {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    color: var(--white-color);
+    background-color: #373737;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 70px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 10px 10px 20px rgb(35, 33, 33);
+    transition: all 0.3s linear;
+}
+
+.btn-to-top.active {
+    pointer-events: auto;
+    opacity: 1;
+    bottom: 120px;
+}
+
+.btn-chat {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+    cursor: pointer;
+}
+
+.btn-chat__icon {
+    font-size: 3.6rem;
+    color: var(--white-color);
+}
+
+/* Overlay */
+
+/* Trần Đức ********************** */
+/* Trần Đức begin */
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.hide {
+    display: none;
+}
+
+.overlay__content {
+    position: relative;
+    cursor: pointer;
+}
+
+.overlay__img {
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+}
+
+.overlay__icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--white-color);
+    font-size: 2.6rem;
+}
+
+.overlay__icon:hover {
+    opacity: 0.6;
+}
+
+/* Trần Đức ********************** */
+/* Trần Đức end */

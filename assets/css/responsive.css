@@ -1,0 +1,389 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    /* sidebar */
+    .navbar-menu {
+        display: block;
+    }
+
+    .navbar-top__list {
+        flex-direction: column;
+    }
+
+    .navbar-top__link--with-border {
+        border: none;
+    }
+
+    .navbar-top__app-wrap {
+        display: flex;
+    }
+
+    .navbar-top {
+        height: 100%;
+    }
+
+    .navbar-top__list.active {
+        display: flex;
+    }
+
+    .menu-open,
+    .menu-close {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.2s ease;
+    }
+
+    .menu-open.active,
+    .menu-close.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-bot__left {
+        margin-left: 20px;
+    }
+    
+    .nav-bot__right {
+        margin-right: 20px;
+    }
+
+    .navbar-scan {
+        position: absolute;
+        top: 30px;
+        left: 16px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    /* Đạt ********************** */
+    /* Đạt begin */
+    
+    .form-login {
+        padding-left: 40px;
+    }
+    
+    .modal {
+        width: 300px;
+        padding-top: 50px;
+    }
+
+    .food-offer__info {
+        margin-top: 26%;
+    }
+
+    .food-offer__layer-03 {
+        top: 8%;
+        left: -18%;
+    }
+
+    .food-offer__heading {
+        font-size: 2.2rem;
+    }
+
+    .food-offer__name {
+        font-size: 2rem;
+    }
+
+    .commodity__detail {
+        font-size: 1.7rem;
+    }
+    
+    .food-extra__content {
+        margin-top: 100px;
+    }
+
+    .food-board {
+        margin-top: 0%;
+        margin-left: 0px;
+        width: calc(100% - 10px);
+    }
+
+    .food-board__container {
+        width: calc(100% - 30px);
+    }
+
+    .food-board__element--with-border::before {
+        width: calc(100% - 100px);
+        top: -14px;
+    }
+
+    .food-board__element--with-border::after {
+        width: calc(100% - 100px);
+        right: 42px;
+    }
+
+    /* Cart */
+
+    /* Footer */
+    .footer {
+        height: 592px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .footer-info {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .footer-brand__img {
+        margin-left: -100px;
+    }
+
+    .footer-info__adress {
+        margin-left: -6px;
+    }
+
+    .footer-info__contact {
+        margin-left: -6px;
+    }
+
+    .footer-logo {
+        top: 54%;
+        right: 30px;
+    }
+
+    .footer-policy__item {
+        font-size: 1.4rem;
+        margin-left: 4px;
+    }
+    
+    /* Đạt ********************** */
+    /* Đạt end */
+}
+
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .nav-bot__language {
+        margin-left: 0;
+    }
+
+    .nav-bot__right {
+        margin-right: 12px;
+    }
+
+    /* Slider */
+
+    /* Trần Đức ********************** */
+    /* Trần Đức begin */
+
+    .slider__item {
+        padding-top: 54%;
+    }
+
+    .slider__dot-list {
+        left: 46%;
+    }
+
+    .slider__dot-item {
+        height: 10px;
+        min-width: 50px;
+        border-radius: 20px;
+    }
+
+    /* Food-offer */
+    .food-offer__layer-01 {
+        height: 200px;
+        width: 66%;
+        margin-left: 72px;
+    }
+
+    .food-offer__layer-02 {
+        width: 70%;
+    }
+
+    .food-offer__layer-03 {
+        top: -18%;
+        left: -10%;
+        height: 142px;
+    }
+
+    .food-offer__heading {
+        font-size: 2.5rem;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        max-width: 290px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .food-offer__name {
+        font-size: 2.2rem;
+        padding-top: 0px;
+        text-align: center;
+        width: 70%;
+    }
+
+    .food-offer__stick {
+        margin-left: 106px;
+        margin-top: 26px;
+    }
+
+    .food-food-offer__btn {
+        border-radius: 20px;
+        margin-top: 60px;
+        margin-left: 56px;
+    }
+    
+    /* Trần Đức ********************** */
+    /* Trần Đức end */
+
+
+    /* Lan Anh ********************** */
+    /* Lan Anh begin */
+    .food-extra {
+        margin-top: 40px;
+    }
+
+    .commodity__detail {
+        max-width: 80%;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .food-extra__heading {
+        font-size: 2.6rem;
+    }
+
+    .youtube-video {
+        display: none;
+    }
+
+    /* Food-board */
+    .food-board {
+        width: calc(100% - 48px);
+        margin-top: 4%;
+        margin-left: 28px;height: 580px;
+    }
+
+    .food-board__container {
+        width: 330px;
+        height: 550px;
+    }
+
+    .food-board__img { 
+        width: auto; 
+        height: 50px;
+        margin-left: 4px;
+        margin-top: 10px;
+    }
+
+    .food-board__sub-heading {
+        margin: 10px;
+        margin-left: 0;
+    }
+
+    .food-board__element--with-border::before {
+        width: 250px;
+        left: 40px;
+    }
+
+    .food-board__element--with-border::after {
+        width: 250px;
+        bottom: -4px;
+        right: 40px;
+    }
+
+    .food-board__element {
+        height: 170px;
+    }
+
+    .food-board__title {
+        max-width: 172px;
+    }
+
+    .full-width {
+        width: 100%;
+    }
+
+    /* Lan Anh ********************** */
+    /* Lan Anh end */
+
+    
+    /* Đạt ********************** */
+    /* Đạt begin */
+    
+    /* Form */
+    .modal {
+        width: 312px;
+    }
+
+    .form-login {
+        padding-top: 16%;
+        padding-left: 56px;
+    }
+
+    .overlay__img {
+        width: 390px;
+        height: 390px;
+        border-radius: 12px;
+    }
+    
+    /* Footer */
+    .footer {
+        height: 630px;
+        flex-direction: column-reverse;
+        padding-bottom: 100px;
+    }
+
+    .footer-brand__img {
+        margin-left: -130%;
+    }
+
+    .footer-logo {
+        top: 64%;
+    }
+
+    .footer-content {
+        width: 100%;
+    }
+
+    .footer-policy {
+        justify-content: space-evenly;
+    }
+
+    .footer-policy__item {
+        font-size: 1.3rem;
+    }
+
+    .footer-info  {
+        margin-top: 0;
+        display: block;
+    }
+
+    .footer-info__adress {
+        margin-left: 12px;
+    }
+
+    .footer-info__contact {
+        margin-right: 0px;
+        margin-left: 12px;
+    }
+
+    .footer-info__item--with-bold {
+        margin-top: 30px;
+        margin-bottom: 4px;
+        font-weight: 600;
+    }
+
+    .footer-logo {
+        right: 84px;
+    }
+    /* Đạt ********************** */
+    /* Đạt end */
+}
