@@ -1,6 +1,6 @@
 /* begin */
 .background-img {
-    background: url(../assets/img/background_app.jpg) top center no-repeat;
+    background: url(../img/background_app.jpg) top center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     width: 100vw;
@@ -327,27 +327,27 @@ html {
 }
 
 .slider__item:first-child {
-    background: url(/assets/img/slider_imgs/img_01) top center / contain no-repeat;
+    background: url(../img/slider_imgs/img_01) top center / contain no-repeat;
 }
 
 .slider__item:nth-child(2) {
-    background: url(/assets/img/slider_imgs/img_02) top center / contain no-repeat;
+    background: url(../img/slider_imgs/img_02) top center / contain no-repeat;
 }
 
 .slider__item:nth-child(3) {
-    background: url(/assets/img/slider_imgs/img_03) top center / contain no-repeat;
+    background: url(../img/slider_imgs/img_03) top center / contain no-repeat;
 }
 
 .slider__item:nth-child(4) {
-    background: url(/assets/img/slider_imgs/img_04) top center / contain no-repeat;
+    background: url(../img/slider_imgs/img_04) top center / contain no-repeat;
 }
 
 .slider__item:nth-child(5) {
-    background: url(/assets/img/slider_imgs/img_05) top center / contain no-repeat;
+    background: url(../img/slider_imgs/img_05) top center / contain no-repeat;
 }
 
 .slider__item:nth-child(6) {
-    background: url(/assets/img/slider_imgs/img_06) top center / contain no-repeat;
+    background: url(../img/slider_imgs/img_06) top center / contain no-repeat;
 }
 
 .slider__dot-list {
@@ -391,7 +391,7 @@ html {
 .food-offer__layer-01 {
     height: 400px;
     width: 108%;
-    background: url(/assets/img/food_slider/frames.png) center / contain no-repeat;
+    background: url(../img/food_slider/frames.png) center / contain no-repeat;
     position: relative;
     margin-left: 14px;
 }
@@ -584,7 +584,7 @@ html {
 
 /* Food-board */
 .food-board {
-    background: url(/assets/img/board_imgs/board.webp) center / cover no-repeat;
+    background: url(../img/board_imgs/board.webp) center / cover no-repeat;
     margin-top: -10%;
     margin-left: 10px;
     width: 445px;
@@ -725,7 +725,7 @@ html {
 
 .form-slider {
     height: 800px;
-    background: url(/assets/img/form/form_background.jpg) top center no-repeat;
+    background: url(../img/form/form_background.jpg) top center no-repeat;
     background-size: cover;
     position: relative;
 }
